@@ -1,38 +1,146 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-table th,
+.task-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.task-table th {
+  background-color: #f4f4f4;
+}
+
+.task-table select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Capsule shape */
+  appearance: none; /* Remove default arrow */
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.task-table select:focus {
+  outline: none;
+  border-color: #007bff; /* Focus color */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+.task-table select option {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px; /* Capsule shape */
+}
+
+.task-table select option:hover {
+  background-color: #f2f2f2; /* Hover color */
+}
+
+.task-table button {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.delete-button {
+  background-color: #ff6347; /* Red color */
   color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.delete-button:hover {
+  background-color: #e74c3c; /* Darker red on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.task-form textarea {
+  height: 100px;
+}
+
+.task-form select {
+  height: 40px;
+}
+
+.task-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-form button:hover {
+  background-color: #45a049;
+}
+
+
+.task-filter select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Capsule shape */
+  appearance: none; /* Remove default arrow */
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.task-filter select:focus {
+  outline: none;
+  border-color: #007bff; /* Focus color */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+.task-filter select option {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px; /* Capsule shape */
+}
+
+.task-filter select option:hover {
+  background-color: #f2f2f2; /* Hover color */
 }
